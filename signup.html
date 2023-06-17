@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Signup</title>
+
+        <script>
+                        function validateForm() {
+                            var name = document.getElementById("name").value;
+                            var email = document.getElementById("email").value;
+                            var username = document.getElementById("username").value;
+                            var password = document.getElementById("password").value;
+
+                            var nameError = document.getElementById("nameError");
+                            var emailError = document.getElementById("emailError");
+                            var usernameError = document.getElementById("usernameError");
+                            var passwordError = document.getElementById("passwordError");
+
+
+                            nameError.textContent = "";
+                            emailError.textContent = "";
+                            usernameError.textContent = "";
+                            passwordError.textContent = "";
+
+                            var isValid = true;
+
+
+                            if (name.trim() === "") {
+                                nameError.textContent = "Name is required";
+                                isValid = false;
+                            }
+            \
+                            if (email.trim() === "") {
+                                emailError.textContent = "Email is required";
+                                isValid = false;
+                            } else if (!isValidEmail(email)) {
+                                emailError.textContent = "Invalid email format";
+                                isValid = false;
+                            }
+
+                            if (username.trim() === "") {
+                                usernameError.textContent = "Username is required";
+                                isValid = false;
+                            }
+
+
+                            if (password.trim() === "") {
+                                passwordError.textContent = "Password is required";
+                                isValid = false;
+                            } else if (!isValidPass(password)) {
+                                passwordError.textContent =
+                                    " Please follow the password criterias:At least 1 Uppercase,At least 1 Lowercase,At least 1 Number,At least 1 Symbol, symbol allowed --> !@#$%^&*_=+-,Min 8 chars and Max 12 chars";
+                                isValid = false;
+                            }
+
+                            return isValid;
+                        }
+
+                        function isValidEmail(email) {
+
+                            var emailRegex = /^\S+@\S+\.\S+$/;
+                            return emailRegex.test(email);
+                        }
+
+                        function isValidPass(password) {
+                            var passRegex =
+                                /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/;
+                            return passRegex.test(password);
+                        }
+
+                        function func()
+                        {
+                            alert("User Registered Successfully!");
+                        }
+        </script>
+
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>User Signup</h1>
+            <form
+                action="/signup.html"
+                method="post"
+                onsubmit="return validateForm()"
+            >
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    />
+                    <span id="nameError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    />
+                    <span id="emailError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Choose a username"
+                        required
+                    />
+                    <span id="usernameError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Choose a password"
+                        required
+                    />
+                    <br /><span id="passwordError" class="error"></span>
+                </div>
+                <button type="submit" class="btn" onclick="func()">
+                    Sign Up
+                </button>
+            </form>
+        </div>
+    </body>
+</html>

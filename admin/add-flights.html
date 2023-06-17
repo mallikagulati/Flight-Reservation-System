@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Flights</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <script>
+            function func() {
+                alert("Flight added successfully!");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Add Flights</h1>
+            <form action="/add-flight" method="POST">
+                <div class="form-group">
+                    <label for="flightNumber">Flight Number:</label>
+                    <input
+                        type="text"
+                        id="flightNumber"
+                        name="flightNumber"
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="flightDate">Flight Date:</label>
+                    <input
+                        type="date"
+                        id="flightDate"
+                        name="flightDate"
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="flightTime">Flight Time:</label>
+                    <input
+                        type="time"
+                        id="flightTime"
+                        name="flightTime"
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="startDestination"
+                        >Flight Start Destination:</label
+                    >
+                    <input
+                        type="text"
+                        id="startDestination"
+                        name="startDestination"
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="endDestination">Flight End Destination:</label>
+                    <input
+                        type="text"
+                        id="endDestination"
+                        name="endDestination"
+                        required
+                    />
+                </div>
+
+                <button type="submit" class="btn" onclick="func()">
+                    Add Flight
+                </button>
+            </form>
+        </div>
+    </body>
+</html>

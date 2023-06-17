@@ -1,0 +1,167 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20; /* Added to remove default body margin */
+  padding: 20; /* Added to remove default body padding */
+  color: #f2aa4cff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+ 
+  background-image: url("../images/bg.jpg");
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+.container {
+  margin-top: 100px ;
+  margin-bottom: 100px ;
+  margin-left: 400px;
+  margin-right: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #101820ff;
+  border: 20px;
+  padding: 30px;
+  padding-bottom: 70px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 25px;
+}
+
+
+.btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #96bdd2;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px,
+      4px 4px 0px 0px, 5px 5px 0px 0px;
+      
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 20px;
+}
+
+.btn:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .btn {
+      padding: 0.25em 0.75em;
+  }
+}
+
+
+html {
+  height: 100%; 
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 8px;
+  width: 200px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.my-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.my-table th,
+.my-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.my-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+.myTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.myTable th,
+.myTable td {
+  padding: 8px;
+  text-align: left;
+}
+
+.myTable th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.tablediv{
+  display: none;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+.buttn {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.buttn {
+  background-color:#96bdd2;
+}
+
+.buttn {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .buttn {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}

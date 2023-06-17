@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Remove Flights</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Remove Flights</h1>
+            <form action="/remove-flight" method="POST">
+                <div class="form-group">
+                    <label for="flightNumber">Flight Number:</label>
+                    <input
+                        type="text"
+                        id="flightNumber"
+                        name="flightNumber"
+                        required
+                    />
+                </div>
+
+                <button type="submit" class="btn">Remove Flight</button>
+            </form>
+        </div>
+    </body>
+</html>
