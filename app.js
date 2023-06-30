@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mysql = require("my-sql");
 const session = require('express-session')
-
+require('dotenv').config()
 const app = express();
 
 app.use(
