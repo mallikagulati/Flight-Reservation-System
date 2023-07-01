@@ -21,21 +21,22 @@ app.use(bodyParser.json());
 
 
 
-const connection = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USERNAME,
+const connection = mysql.createPool({
+    host: process.env.DB_HOST, 
+    user: process.env.DB_USERNAME, 
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DBNAME,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 });
 
+connection.getConnection((err, conn) => {
+    if(err) console.log(err)
+    console.log("Connected successfully")
+})
 
-connection.connect((error) => {
-    if (error) {
-        console.error("Failed to connect to database:", error);
-    } else {
-        console.log("Connected to database.");
-    }
-});
+module.exports = connection.promise()
 
 
 
