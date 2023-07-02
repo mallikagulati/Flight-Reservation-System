@@ -308,6 +308,7 @@ app.post("/signup.html",function(req,res){
             //res.status(500).send("Failed to save booking.");
         } else {
             console.log("User saved:", result);
+            res.redirect("/");
             //res.status(200).send("Booking added Succesfully!");
         }
     });
